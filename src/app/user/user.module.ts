@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { UserFormComponent } from './components/user-form/user-form.component'; // Verifica que esta ruta sea correcta
+import { UserRoutingModule } from './user-routing.module';
+import { UserFormComponent } from './components/user-form/user-form.component';
 
 @NgModule({
   declarations: [
-    UserFormComponent // Declarar el componente
+    UserFormComponent
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule // Importar ReactiveFormsModule para formularios reactivos
+    ReactiveFormsModule,
+    UserRoutingModule
   ],
   exports: [
-    UserFormComponent // Exportar el componente para usarlo fuera del módulo
+    UserFormComponent
   ]
 })
 export class UserModule {}
